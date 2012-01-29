@@ -1,10 +1,10 @@
 # django-htmlpurifier
-A silly but useful hack for sanitizing untrusted HTML input in Django forms via PHP's HTML Purifier
+A silly but useful hack for sanitizing untrusted HTML input in Django forms via PHP's [HTML Purifier](http://htmlpurifier.org/)
 
 ## Prerequisites
 PHP 5.0.5+ w/ CLI  
 [HTML Purifier](http://htmlpurifier.org/) library - standard, lite, or PEAR distribution  
-*NOTE: `HTMLPurifier.auto.php` should be in your PHP path.*
+_NOTE: `HTMLPurifier.auto.php` should be in your PHP path._
 
 
 ## Installation
@@ -28,13 +28,13 @@ Define a field that should be sanitized:
 or perhaps  
 `MyHtmlField = htmlpurifier.HTMLField(widget=forms.TextArea)`  
 
-*NOTE: HTMLField() is a subclass of Django's CharField.*
+*HTMLField() is a subclass of Django's CharField.*
 
-If for some reason you need a low-level function that simply purifies a string input, do:   
+If for some reason you don't want to deal with forms and just need a low-level function that HTML-purifies a string input, do:   
 `htmlpurifier.purify(my_html_str)` 
 
 
 ## Writing your own PHP processing script
 django-htmlpurifier ships with a very basic PHP script that provides an interface to
 the PHP HTML Purifier library using its default settings. If the default settings 
-do not float your boat, please refer to the [HTML Purifier docs](http://htmlpurifier.org/live/configdoc/plain.html).
+do not float your boat, please refer to the [HTML Purifier configuration reference](http://htmlpurifier.org/live/configdoc/plain.html).
