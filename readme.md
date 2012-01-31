@@ -2,6 +2,8 @@
 A silly but useful hack for sanitizing untrusted HTML input in Django forms via PHP's [HTML Purifier](http://htmlpurifier.org/)
 
 ## Prerequisites
+Django (tested with 1.3)  
+Python 2.6+  
 PHP 5.0.5+ w/ CLI  
 [HTML Purifier](http://htmlpurifier.org/) library - standard, lite, or PEAR distribution  
 _NOTE: `HTMLPurifier.auto.php` should be in your PHP path._   
