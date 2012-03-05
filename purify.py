@@ -8,6 +8,6 @@ def purify(data):
     cl = ['php', '-f', HTMLPURIFIER_SCRIPT_PATH]
     cwd = os.path.dirname(__file__) 
     p = subprocess.Popen(cl, cwd=cwd, stdout=subprocess.PIPE, stdin=subprocess.PIPE)
-    out = p.communicate(data)
+    out = p.communicate(data.encode('utf8'))
     return out[0]
 
