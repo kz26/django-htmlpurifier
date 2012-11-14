@@ -8,4 +8,6 @@ setup ( name = 'htmlpurifier',
         description = 'A silly but useful hack for sanitizing untrusted HTML input in Django forms via the PHP HTML Purifier library',
         package_dir = {'htmlpurifier': 'lib'},
         packages = ['htmlpurifier'],
+        package_data = {'htmlpurifier': ['htmlpurifier-cli.php', 'readme.md',]},
+        include_package_data=True,
        )
